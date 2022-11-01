@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <form action="" class="form" id="form-1" method="POST">
+        <div class="header">
+            <h3>Thành viên đăng ký</h3>
+            <p>Cùng nhau học lập trình miễn phí tại F8 ❤️</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="formName">Tên đầy đủ</label>
+                <input type="text" class="data" rule="required" placeholder="VD: Hoài Vĩ" id="formName" name="Name">
+                <span class="formMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="formMail">Email</label>
+                <input type="mail" rule="mail" placeholder="VD: email@domain.com" id="formMail" name="Email">
+                <span class="formMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="formPass">Mật khẩu</label>
+                <input type="password" rule="pass" placeholder="Nhập mật khẩu" id="formPass" name="Password">
+                <span class="formMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="formRepass">Nhập lại mật khẩu</label>
+                <input type="password" rule="repass" placeholder="Nhập lại mật khẩu" id="formRepass" name="Repasword">
+                <span class="formMessage"></span>
+            </div>
+
+            <div class="form-group gender">
+                <label>Giới tính</label>
+                <div>
+                    <input type="radio" rule="required" name="gender" value="male" id="male">
+                    <label for="male" class="inputLabel">Nam</label>
+                </div>
+                <div>
+                    <input type="radio" rule="required" name="gender" value="female" id="female">
+                    <label for="female" class="inputLabel">Nữ</label>
+                </div>
+                <div>
+                    <input type="radio" rule="required" name="gender" value="other" id="other">
+                    <label for="other" class="inputLabel">Khác</label>
+                </div>
+                <span class="formMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="province">Tỉnh/TP</label>
+                <select name="province" id="province" rule="required">
+                    <option value="">-- Chọn Tỉnh/TP --</option>
+                    <option value="hn">Hà Nội</option>
+                    <option value="hcm">Hồ Chí Minh</option>
+                    <option value="dn">Đà Nẵng</option>
+                </select>
+                <span class="formMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="avatar">Ảnh đại diện</label>
+                <input type="file" id="avatar" name="avatar" rule="required" multiple>
+                <span class="formMessage"></span>
+            </div>
+        </div>
+
+        <!-- 
+
+         -->
+
+        
+        <button class="formBtn">Đăng ký</button>
+
+    </form>
+    <script src="./main.js"></script>
+
+    <script>
+        Validator({
+            form : '#form-1',
+            formGroupSelector : '.form-group'  
+        });
+    </script>
+</body>
+
+</html>
